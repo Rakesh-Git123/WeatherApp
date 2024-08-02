@@ -7,6 +7,7 @@ import drizzle from "./assets/drizzle.png";
 import rain from "./assets/rain.png";
 import haze from "./assets/haze.png";
 import snow from "./assets/snow.png";
+import thunderstorm from "./assets/thunderstorm.png"
 import humidity from "./assets/humidity.png";
 import background from "./assets/background.jpeg"
 import { useEffect, useState } from "react";
@@ -17,6 +18,7 @@ const Weather = () => {
     const [Apidata, setApidata] = useState({});
     const [Fetched, setFetched] = useState(false);
     const [search, Setsearch] = useState("");
+    const [isOffline, setIsOffline] = useState(navigator.onLine);
     const allIcons = {
         "01d": clear,
         "01n": clear,
@@ -30,6 +32,8 @@ const Weather = () => {
         "09n": rain,
         "10d": rain,
         "10n": rain,
+        "11d": thunderstorm,
+        "11n": thunderstorm,
         "13d": snow,
         "13n": snow,
         "50d": haze,
@@ -62,6 +66,17 @@ const Weather = () => {
     useEffect(() => {
         fetchData("New Delhi");
     }, []);
+    useEffect(()=>{
+        setIsOffline(navigator.onLine)
+    },[search])
+
+    if (!isOffline) {
+        return (
+            <div className="offline">
+                <p style={{color:"white"}}>No internet connection. Please check your connection and try again.</p>
+            </div>
+        );
+    }
 
     if (!Fetched) {
         return (
