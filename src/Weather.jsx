@@ -14,7 +14,6 @@ import Loading from "./Loading";
 
 
 const Weather = () => {
-    console.log(process.env.REACT_APP_API_ID)
     const [Apidata, setApidata] = useState({});
     const [Fetched, setFetched] = useState(false);
     const [search, Setsearch] = useState("");
@@ -46,9 +45,9 @@ const Weather = () => {
             setFetched(false);
             let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=dd365ea291a16fc307ccbbed50b03524`)
             let data = await res.json();
-            if (data.cod === 404) {
-                alert("City not found. Please enter a valid city.");
-                setFetched(true);
+            if (data.cod === "404") {
+                alert("City not found. Please enter a valid city.")
+                setFetched(true)
                 return;
             }
             setApidata(data);
