@@ -18,7 +18,6 @@ const Weather = () => {
     const [Apidata, setApidata] = useState({});
     const [Fetched, setFetched] = useState(false);
     const [search, Setsearch] = useState("");
-    const [isOffline, setIsOffline] = useState(navigator.onLine);
     const allIcons = {
         "01d": clear,
         "01n": clear,
@@ -66,17 +65,6 @@ const Weather = () => {
     useEffect(() => {
         fetchData("New Delhi");
     }, []);
-    useEffect(()=>{
-        setIsOffline(navigator.onLine)
-    },[search])
-
-    if (!isOffline) {
-        return (
-            <div className="offline">
-                <p style={{color:"white"}}>No internet connection. Please check your connection and try again.</p>
-            </div>
-        );
-    }
 
     if (!Fetched) {
         return (
