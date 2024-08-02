@@ -1,0 +1,96 @@
+body{
+    color: black;
+}
+.weather{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.weather .search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.weather .search-bar input{
+    border: none;
+    outline: none;
+    height: 30px;
+    padding-left: 15px;
+    border-radius: 20px;
+    background: #ebfffc;
+}
+ .search-bar .searchimg{
+    border-radius: 50%;
+    background-color: #ebfffc;
+    height: 30px;
+    width: 30px;
+    padding: 7px;
+    cursor: pointer;
+}
+.weatherimg{
+    height: 120px;
+    margin-top: 10px;
+}
+.temprature p{
+    font-size: 60px;
+}
+.temp1 p{
+    font-size: 20px;
+}
+.temprature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.temprature span{
+    font-size: 30px;
+}
+
+.location{
+    font-size: 35px;
+    margin-top: 5px;
+}
+.humidityimg{
+    height: 20px;
+    color: red;
+}
+.footer{
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+}
+.footer p{
+    font-size: 12px;
+}
+.footer1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.footer1 img{
+    width: 20px;
+}
+.footer2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.footer2 img{
+    height: 22px;
+}
+
+/* css for small screen devices ....................*/
+@media screen and (max-width:600px){
+    .temprature{
+        margin-top: 15px;
+    }
+}
