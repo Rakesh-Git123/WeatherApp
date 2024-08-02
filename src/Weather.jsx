@@ -44,7 +44,7 @@ const Weather = () => {
                 return;
             }
             setFetched(false);
-            let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_API_ID}`)
+            let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=dd365ea291a16fc307ccbbed50b03524`)
             let data = await res.json();
             if (data.cod === 404) {
                 alert("City not found. Please enter a valid city.");
