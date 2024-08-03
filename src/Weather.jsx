@@ -86,6 +86,7 @@ const Weather = () => {
                         <p>{Apidata.weather[0].main}</p>
                     </div>
                 </div>
+                <p style={{color:"white"}}>Feels like: {Math.floor(Apidata.main.feels_like)}°C</p>
                 <p className="location">{Apidata.name}</p>
                 <div className="footer">
                     <div className="footer1">
