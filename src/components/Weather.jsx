@@ -1,15 +1,15 @@
 import "./Weather.css";
-import searchicon from "./assets/search.png";
-import clear from "./assets/clear.png";
-import wind from "./assets/wind.png";
-import cloud from "./assets/cloud.png";
-import drizzle from "./assets/drizzle.png";
-import rain from "./assets/rain.png";
-import haze from "./assets/haze.png";
-import snow from "./assets/snow.png";
-import thunderstorm from "./assets/thunderstorm.png"
-import humidity from "./assets/humidity.png";
-import background from "./assets/background.jpeg"
+import searchicon from "../assets/search.png";
+import clear from "../assets/clear.png";
+import wind from "../assets/wind.png";
+import cloud from "../assets/cloud.png";
+import drizzle from "../assets/drizzle.png";
+import rain from "../assets/rain.png";
+import haze from "../assets/haze.png";
+import snow from "../assets/snow.png";
+import thunderstorm from "../assets/thunderstorm.png"
+import humidity from "../assets/humidity.png";
+import background from "../assets/background.jpeg"
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
 
